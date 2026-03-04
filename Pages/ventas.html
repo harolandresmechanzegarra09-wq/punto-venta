@@ -20,7 +20,21 @@
 <script src="../js/db.js"></script>
 <script src="../js/permisos.js"></script>
 <script src="../js/ventas.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const rol = localStorage.getItem("rolActivo");
+
+    if (rol !== "administración") {
+        const boton = document.getElementById("btnAdmin");
+        if (boton) {
+            boton.style.display = "none";
+        }
+    }
+});
+</script>
 </body>
 
 </html>
+
 
