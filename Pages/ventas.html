@@ -25,7 +25,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     const rol = localStorage.getItem("rolActivo");
 
-    if (rol !== "administración") {
+    if (rol !== "administración" && rol !== "admin") {
         const boton = document.getElementById("btnAdmin");
         if (boton) {
             boton.style.display = "none";
@@ -36,5 +36,6 @@ document.addEventListener("DOMContentLoaded", function() {
 </body>
 
 </html>
+
 
 
