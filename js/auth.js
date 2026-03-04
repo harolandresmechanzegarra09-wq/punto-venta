@@ -6,6 +6,7 @@ function login(){
 
     if(encontrado){
         localStorage.setItem("rolActivo", encontrado.rol);
+        localStorage.setItem("usuarioActivo", encontrado.usuario);
 
         // 🔥 redirección inteligente
         if(encontrado.rol === "admin"){
@@ -22,4 +23,5 @@ function cerrarSesion(){
     localStorage.removeItem("usuarioActivo");
     localStorage.removeItem("rolActivo");
     window.location.href = "login.html";
+
 }
